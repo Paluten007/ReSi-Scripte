@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         ReSi: MapTools
-// @version      0.1
+// @version      BETA 0.1
 // @description  Mehr Map Optionen
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/map
 // @grant        none
+// @updateURL    https://github.com/DispoOhnePlan/ReSi-Scripte/raw/master/MapTools/index.user.js
 // ==/UserScript==
 
 (function() {
