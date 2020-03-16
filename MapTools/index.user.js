@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ReSi: MapTools
-// @version      BETA 0.1
+// @version      BETA 0.2
 // @description  Mehr Map Optionen
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/map
@@ -28,11 +28,11 @@
                 var circle = L.circle([lat, lng], {
                     //color: '#000000',
                     weight: 0,
-                    fillColor: 'red',
+                    fillColor: '#696969',
                     fillOpacity: 1,
                     radius: 3000,
                     renderer: canvasRenderer
-                }).bindTooltip("Feuer-  und Rettungswache 1").addTo(borderGroup).addTo(mymap);
+                }).bindTooltip(layer._tooltip._content).addTo(borderGroup).addTo(mymap);
             } else if (layer.options.url.indexOf("mission") != -1) {
                 missions.push(eval(layer.options.url.replace("?id=", "")));
             }
@@ -55,9 +55,9 @@
         if (mymap.getZoom() <= 14) {
             mymap.getPane('semitransparent').style.opacity = '0.2';
         } else if (mymap.getZoom() == 13) {
-            mymap.getPane('semitransparent').style.opacity = '0.1';
+            mymap.getPane('semitransparent').style.opacity = '0.15';
         } else if (mymap.getZoom() > 13) {
-            mymap.getPane('semitransparent').style.opacity = '0.05';
+            mymap.getPane('semitransparent').style.opacity = '0.1';
         }
     });
 })();
