@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ReSi: MapTools
-// @version      0.1
+// @version      0.1.1
 // @description  Mehr Map Optionen
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/map
@@ -33,7 +33,7 @@
                     fillOpacity: 1,
                     radius: 3000,
                     renderer: canvasRenderer
-                }).bindTooltip(layer._tooltip._content).addTo(borderGroup).addTo(mymap);
+                })/*.bindTooltip(layer._tooltip._content)*/.addTo(borderGroup).addTo(mymap);
             } else if (layer.options.url.indexOf("mission") != -1) {
                 missions.push(eval(layer.options.url.replace("?id=", "")));
             } else if (layer.options.url.indexOf("vehicle") != -1) {
