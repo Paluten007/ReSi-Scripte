@@ -8,7 +8,7 @@
 // @updateURL    https://github.com/DispoOhnePlan/ReSi-Scripte/raw/master/MapTools/index.user.js
 // ==/UserScript==
 
-(function() {
+//(function() {
 
     mymap.createPane('semitransparent');
     mymap.getPane('semitransparent').style.opacity = '0.2';
@@ -75,4 +75,4 @@
             mymap.getPane('semitransparent').style.opacity = '0.1';
         }
     });
-})();
+//})();
