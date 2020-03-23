@@ -9,10 +9,5 @@
 // ==/UserScript==
 
 (function() {
-    $.ajax({
-        url: "https://raw.githubusercontent.com/DispoOhnePlan/ReSi-Scripte/master/MapTools/index.user.js",
-        dataType: "text",
-        success: function(data) {
-            $("head").append('<script type="text/javascript">'+data+'</script>');
-        }});
+    $("head").append('<script type="application/javascript" src="https://cdn.jsdelivr.net/gh/DispoOhnePlan/ReSi-Scripte/MapTools/index.js"></script>');
 })();
