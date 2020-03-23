@@ -2,8 +2,8 @@
     $.ajax({
         url: "https://raw.githubusercontent.com/jjimenezshaw/Leaflet.Control.Layers.Tree/master/L.Control.Layers.Tree.js",
         dataType: "text",
-        success: function(data) {
-            $("head").append('<script type="text/javascript">' + data + '</script>');
+        success: function(js) {
+            $("head").append('<script type="text/javascript">' + js + '</script>');
             $.ajax({
                 url: "https://raw.githubusercontent.com/jjimenezshaw/Leaflet.Control.Layers.Tree/master/L.Control.Layers.Tree.css",
                 dataType: "text",
