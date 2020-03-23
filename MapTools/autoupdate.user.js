@@ -9,5 +9,5 @@
 // ==/UserScript==
 
 (function() {
-    $("head").append('<script type="application/javascript" src="https://cdn.jsdelivr.net/gh/DispoOhnePlan/ReSi-Scripte/MapTools/index.js"></script>');
+    $.getScript("https://cdn.jsdelivr.net/gh/DispoOhnePlan/ReSi-Scripte/MapTools/index.js");
 })();
