@@ -1,4 +1,5 @@
-$.ajax({
+(function() {
+    $.ajax({
         url: "https://raw.githubusercontent.com/jjimenezshaw/Leaflet.Control.Layers.Tree/master/L.Control.Layers.Tree.js",
         dataType: "text",
         success: function(data) {
@@ -101,3 +102,4 @@ $.ajax({
             });
         }
     });
+})();
