@@ -1,11 +1,3 @@
-// ==UserScript==
-// @name         ReSi: MapTools Autoupdate
-// @version      0.1.1
-// @description  Mehr Map Optionen
-// @author       DispoOhnePlan
-// @match        https://rettungssimulator.online/map
-// @grant        none
-// ==/UserScript==
 (function() {
   $.getScript("https://cdn.jsdelivr.net/gh/jjimenezshaw/Leaflet.Control.Layers.Tree/L.Control.Layers.Tree.js", function() {
     $("head").append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jjimenezshaw/Leaflet.Control.Layers.Tree/L.Control.Layers.Tree.css"/>');
