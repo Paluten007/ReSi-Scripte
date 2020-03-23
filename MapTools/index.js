@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         [DEV] ReSi: MapTools Autoupdate
-// @version      0.1
+// @name         ReSi: MapTools Autoupdate
+// @version      0.1.1
 // @description  Mehr Map Optionen
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/map
