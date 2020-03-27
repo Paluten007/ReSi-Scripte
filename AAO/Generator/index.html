@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>AAO Generator für ReSi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function($) {
+            $(document).on('click', '#new_aao', function(event) {
+                event.preventDefault();
+                var name = prompt("Name der AAO");
+            });
+        });
+    </script>
+    <style media="screen">
+        .aao_editor_head {
+            background-color: #EA2027;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .card {
+            display: inline-flex;
+            margin-bottom: 10px;
+            width: 20%;
+            min-width: 150px;
+            height: fit-content;
+        }
+        
+        #container {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-around;
+        }
+        
+        .badge-pill {
+            float: right;
+        }
+        
+        .input_nv {
+            border: none;
+            color: inherit;
+            min-width: 10px;
+            background: inherit;
+            width: 100%;
+        }
+        
+        .badge-pill .input_nv {
+            max-width: 20px;
+            text-align: center;
+        }
+        
+        .aao_btn {
+            display: block;
+            font-size: 12px;
+            padding: 5px;
+        }
+        
+        select {
+            moz-appearance: none;
+            -webkit-appearance: none;
+            border: 0;
+            border-bottom: 1px solid white;
+            background-color: white !important;
+            color: inherit;
+        }
+        
+        option {
+            border: 0;
+            background-color: white !important;
+            outline: 0px;
+        }
+        
+        option:focus,
+        option:active {
+            border: 0;
+            outline: none;
+            background: white;
+        }
+        
+        .aao_btn {
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">AAO-Generator</h1>
+        <p class="lead">Diese Seite ermöglicht dir neue Alarm- und Ausrückeordnungen zu erstellen</p>
+        <hr class="my-4">
+        <p>Bei Fehlern melde dich einfach im Forum</p>
+        <a class="btn btn-primary btn-lg" href="https://forum.rettungssimulator.online/index.php?thread/230-aao/&postID=766#post766" role="button">Zum Forum</a>
+        <br />
+        <button class="btn btn-succes btn-lg" id="aao_save">Speichern</button>
+    </div>
+    <div id="container">
+
+    </div>
+    <script src="main.js" charset="utf-8"></script>
+
+</body>
+
+</html>
