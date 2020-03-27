@@ -8,6 +8,62 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">
+      function getAAO(){
+       var aao = [{
+      name: "Löschzug",
+      vehicles: {
+        lf: 2,
+        dlk: 1,
+        elw: 1
+      }
+    }, {
+      name: "LF",
+      vehicles: {
+        lf: 1,
+      }
+    }, {
+      name: "ELW",
+      vehicles: {
+        elw: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }
+  ];
+       if(localStorage.getItem("resi_aao") !== null){
+           return JSON.parse(localStorage.getItem("resi_aao"));
+       }else{
+           return aao;
+       }
+   }
         $(document).ready(function($) {
           const vehicles = {
             "lf": "Löschfahrzeug",
