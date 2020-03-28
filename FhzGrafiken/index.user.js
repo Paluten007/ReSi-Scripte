@@ -3,6 +3,7 @@
 // @version      0.1
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/map
+// @updateURL    https://github.com/DispoOhnePlan/ReSi-Scripte/raw/master/FhzGrafiken/index.user.js
 // @grant        none
 // ==/UserScript==
 (function() {
@@ -20,8 +21,8 @@
     "8": [ // Fahrzeug ID
       "90px", //Höhe
       "105px", // Breite
-      "https://cdn.discordapp.com/attachments/689200017696882877/693441309230235688/grafik.png", // Bild normal
-      "https://cdn.discordapp.com/attachments/689200017696882877/693441309230235688/grafik.png", // Bild SoSi
+      "", // Bild normal (URL)
+      "", // Bild SoSi (URL)
     ]
   };
   update();
