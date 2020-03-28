@@ -3,6 +3,7 @@
 // @version      0.1
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/map
+// @match        https://rettungssimulator.online/alarming-choose-vehicles?missionid=*
 // @updateURL    https://github.com/DispoOhnePlan/ReSi-Scripte/raw/master/FhzGrafiken/index.user.js
 // @grant        none
 // ==/UserScript==
