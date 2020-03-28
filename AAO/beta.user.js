@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ReSi: AAO
-// @version      BETA 0.1
+// @version      BETA 0.1.0.1
 // @description  Alarm- und Ausrückeordnung für den ReSi
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/alarming-choose-vehicles?missionid=*
@@ -8,30 +8,67 @@
 // ==/UserScript==
 (function() {
   'use strict';
-  const aao = [{
-    name: "Löschzug",
-    vehicles: {
-      lf: 2,
-      dlk: 1,
-      elw: 1
+    function saveAAO(aao){
+        localStorage.setItem("resi_aao", JSON.stringify(aao));
     }
-  }, {
-    name: "LF",
-    vehicles: {
-      lf: 1,
+   function getAAO(){
+       var aao = [{
+      name: "Löschzug",
+      vehicles: {
+        lf: 2,
+        dlk: 1,
+        elw: 1
+      }
+    }, {
+      name: "LF",
+      vehicles: {
+        lf: 1,
+      }
+    }, {
+      name: "ELW",
+      vehicles: {
+        elw: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
+    }, {
+      name: "DLK",
+      vehicles: {
+        dlk: 1
+      }
     }
-  }, {
-    name: "ELW",
-    vehicles: {
-      elw: 1
-    }
-  }, {
-    name: "DLK",
-    vehicles: {
-      dlk: 1
-    }
-  }, ];
-  // AB HIER NICHTS ÄNDERN!
+  ];
+       if(localStorage.getItem("resi_aao") !== null){
+           return JSON.parse(localStorage.getItem("resi_aao"));
+       }else{
+           return aao;
+       }
+   }
+  const aao = getAAO();
+
   $("head").append(`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"><style>
 #aao{
   width: 100%;
@@ -116,7 +153,7 @@
     "TLF 16/25": "lf",
     "TLF 16/45": "lf",
     "TLF 20/40": "lf",
-    "TLF 20/40 SL": "lf",
+    "TLF 20/40-SL": "lf",
     "TLF 2000": "lf",
     "TLF 24/50": "lf",
     "TLF 3000": "lf",
@@ -124,16 +161,15 @@
     "TLF 8/18": "lf",
     "TLF 8/8": "lf",
     "TroTLF ": "lf",
-    "MLF ": "lf",
-    "KLF ": "lf",
-    "TSF ": "lf",
-    "TSF-W ": "lf",
-    "StLF ": "lf",
     "DLK 23/12": "dlk",
     "MTW": "mtw",
     "ELW": "elw",
     "KdoW": "elw",
     "RW": "rw",
+    "TLF 3000-St": "lf",
+    "TLF 4000-St": "lf",
+    "TLF 9000": "lf",
+    "TLF 6000": "lf",
   };
   var availableFhz = {};
   $.each(vehicles, function(index, el) {
@@ -166,8 +202,18 @@
         if ($(i).siblings().find("input").prop('checked') == false) {
           $(i).siblings().find("input").click();
           aao_vehicles[name]--;
+            if( aao_vehicles[name] < 1){
+                      delete aao_vehicles[name];
+                  }
         }
       }
     });
+      if(Object.keys(aao_vehicles).length !== 0){
+                var question = "Es fehlen folgende Fahrdzeuge:\n";
+                $.each(aao_vehicles, function(index, el) {
+                    question += el + " " + index.toUpperCase()+" ";
+                });
+                alert(question);
+      }
   });
 })();
