@@ -34,31 +34,6 @@
       vehicles: {
         dlk: 1
       }
-    }, {
-      name: "DLK",
-      vehicles: {
-        dlk: 1
-      }
-    }, {
-      name: "DLK",
-      vehicles: {
-        dlk: 1
-      }
-    }, {
-      name: "DLK",
-      vehicles: {
-        dlk: 1
-      }
-    }, {
-      name: "DLK",
-      vehicles: {
-        dlk: 1
-      }
-    }, {
-      name: "DLK",
-      vehicles: {
-        dlk: 1
-      }
     }
   ];
        if(localStorage.getItem("resi_aao") !== null){
