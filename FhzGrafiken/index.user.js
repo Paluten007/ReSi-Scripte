@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ReSi: Fahrzeuggrafiken ersetzen
-// @version      0.1
+// @version      0.1.0.1
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/map
 // @match        https://rettungssimulator.online/alarming-choose-vehicles?missionid=*
