@@ -19,7 +19,7 @@
     });
   }
   var replace = {
-    "8": [ // Fahrzeug ID
+    "": [ // Fahrzeug ID
       "90px", //Höhe
       "105px", // Breite
       "", // Bild normal (URL)
