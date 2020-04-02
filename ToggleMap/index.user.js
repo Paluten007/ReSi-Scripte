@@ -5,6 +5,7 @@
 // @description  Map im Einsatzfenter ein- oder ausblenden
 // @author       DispoOhnePlan
 // @match        https://rettungssimulator.online/alarming-choose-vehicles?missionid=*
+// @updateURL    https://github.com/DispoOhnePlan/ReSi-Scripte/raw/master/ToggleMap/index.user.js
 // @run          document-end
 // @grant        none
 // ==/UserScript==
